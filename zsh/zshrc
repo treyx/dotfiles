@@ -7,7 +7,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-
+##Load Powerline
 source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
@@ -19,6 +19,13 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+
+# --- #
+# hub #
+# --- #
+
+eval "$(hub alias -s)"
+
 # ------- #
 # aliases #
 # ------- #
@@ -28,7 +35,7 @@ alias todo="subl ~/Documents/todo.txt"
 alias dotf="subl ~/.dotfiles"
 
 
-#alias git="hub"
+alias git="hub"
 alias gs="git status"
 alias gds="git diff | subl"
 alias gc="git checkout"
@@ -86,4 +93,5 @@ alias tu2="cd ~/turing/module2"
 # Resource Usage
 # alias df='df -kh'
 
+#display path for troubleshooting
 alias path="echo '$PATH' | tr : '\n'"
