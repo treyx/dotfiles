@@ -1,0 +1,28 @@
+{
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Base16/base16-tomorrow.dark.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"fold_buttons": false,
+	"font_face": "Source Code Pro Light",
+	"font_size": 20,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"rulers":
+	[
+		80
+	],
+	"save_on_focus_lost": true,
+	"scroll_past_end": true,
+	"tab_size": 2,
+	"theme": "Spacegray Eighties.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "false"
+}

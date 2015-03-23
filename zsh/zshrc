@@ -1,0 +1,63 @@
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/trey/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+#
+# the main RC file (will be linked to ~/.zshrc)
+#
+
+# ---------- #
+# zsh config #
+# ---------- #
+
+#
+# build array of environment config files for sourcing
+#
+
+typeset -ga sources
+sources+="$HOME/projects/dotfiles/zsh/antigenrc.zsh"
+sources+="$HOME/projects/dotfiles/zsh/functions.zsh"
+sources+="$HOME/projects/dotfiles/zsh/aliases.zsh"
+sources+="$HOME/projects/dotfiles/zsh/prompt.zsh"
+
+#
+# include sources
+#
+
+foreach file (`echo $sources`)
+    if [[ -a $file ]]; then
+        source $file
+    fi
+end
+
+#
+# custom bin directory for scripting
+#
+
+export PATH="$HOME/projects/dotfiles/bin:$PATH"
+
+# ----- #
+# rbenv #
+# ----- #
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# --- #
+# hub #
+# --- #
+
+eval "$(hub alias -s)"
+
+#########
+
+export VISUAL='/Users/trey/projects/dotfiles/bin/subl'
+export EDITOR="$VISUAL --wait"
+
+export GOPATH=$HOME/projects/go-workspace
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
