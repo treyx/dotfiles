@@ -72,4 +72,4 @@ alias tu2="cd ~/turing/module2"
 
 
 # Resource Usage
-alias df='df -kh'
+# alias df='df -kh'
