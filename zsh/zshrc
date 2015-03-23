@@ -58,7 +58,7 @@ alias gra="git remote add"
 
 
 # git commit / twitter
-# function gcm {             
+# function gcm {
 #   git commit -m "$1"
 #   ruby -e 'require %(jumpstart_auth);ARGV.join(" ").scan(/.{1,140}/).each { |tweet| JumpstartAuth.twitter.update(tweet)}' $1
 # }
@@ -85,3 +85,5 @@ alias tu2="cd ~/turing/module2"
 
 # Resource Usage
 # alias df='df -kh'
+
+alias path="echo '$PATH' | tr : '\n'"
