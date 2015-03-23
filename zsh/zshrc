@@ -16,6 +16,8 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.z
 # aliases #
 # ------- #
 
+alias dotf="subl ~/.dotfiles"
+
 
 #alias git="hub"
 alias gs="git status"
@@ -28,6 +30,7 @@ alias gpu="git push --set-upstream origin HEAD"
 
 alias gcb="git checkout -b"
 
+#removes all local branches that have been merged into master
 alias gclean="git branch --merged master | ag -v '\* master' | xargs -n 1 git branch -d"
 
 # # Log (l)
