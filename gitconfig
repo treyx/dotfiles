@@ -1,0 +1,17 @@
+[user]
+  email = tomlinson.trey@gmail.com
+  name = Trey Tomlinson
+  username = treyyyy
+  initials = TT
+[core]
+  excludesfile = /Users/trey/.gitignore_global
+  editor = subl -w
+[color]
+  ui = true
+  diff = auto
+  status = auto
+  branch = auto
+[diff]
+  tool = opendiff
+[push]
+  default = upstream
