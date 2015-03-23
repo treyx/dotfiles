@@ -16,6 +16,8 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.z
 # aliases #
 # ------- #
 
+alias todo="subl ~/Documents/todo.txt"
+
 alias dotf="subl ~/.dotfiles"
 
 
