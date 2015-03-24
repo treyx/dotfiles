@@ -16,3 +16,5 @@
   tool = opendiff
 [push]
   default = upstream
+[web]
+  browser = google-chrome
