@@ -1,11 +1,12 @@
 [user]
   email = tomlinson.trey@gmail.com
   name = Trey Tomlinson
-  username = treyx
   initials = TT
 [core]
   excludesfile = /Users/trey/.gitignore_global
   editor = subl -w
+[github]
+  user = treyx
 [color]
   ui = true
   diff = auto
