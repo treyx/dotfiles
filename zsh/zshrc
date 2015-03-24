@@ -74,6 +74,10 @@ alias gra="git remote add"
 alias s="subl"
 alias ss="subl ."
 
+
+##
+# navigation #
+alias ..="cd .."
 alias tu1="cd ~/turing/module1"
 alias tu2="cd ~/turing/module2"
 
@@ -95,3 +99,12 @@ alias tu2="cd ~/turing/module2"
 
 #display path for troubleshooting
 alias path="echo '$PATH' | tr : '\n'"
+
+
+# ------------- #
+# miscellaneous #
+# ------------- #
+
+# Get week number #
+alias week='date +%V'
+
