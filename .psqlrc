@@ -1,0 +1,12 @@
+## Prompt ##
+
+\set PROMPT1 '%[%033[1m%]%M %n@%/%R%[%033[0m%]%# '
+
+## Second Prompt ##
+\set PROMPT2 '[more] %R > '
+
+
+# If a command is run more than once in a row, only store it once in the
+# history.
+
+\set HISTCONTROL ignoredups
