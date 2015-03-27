@@ -7,8 +7,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-##Load Powerline
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
 # ----- #
@@ -107,4 +105,3 @@ alias path="echo '$PATH' | tr : '\n'"
 
 # Get week number #
 alias week='date +%V'
-
