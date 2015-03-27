@@ -8,6 +8,21 @@ compinit
 # End of lines added by compinstall
 
 
+# ------- #
+# Antigen #
+# ------- #
+
+source $HOME/.antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle command-not-found
+
+antigen theme robbyrussell
+
+antigen apply
+
 
 # ----- #
 # rbenv #
