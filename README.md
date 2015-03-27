@@ -1,8 +1,4 @@
 work in progress... building my environment from scratch
 
-all dotfiles managed with ln :D
 
-- [ZSH](http://zsh.sourceforge.net/)
-- [powerline](https://github.com/powerline/powerline)
-- [rbenv](https://github.com/sstephenson/rbenv)
-- [git](http://git-scm.com/)
+| OSX | iTerm2 | [ZSH](http://zsh.sourceforge.net/) | Sublime Text 3 | [git](http://git-scm.com/) | [rbenv](https://github.com/sstephenson/rbenv) |
