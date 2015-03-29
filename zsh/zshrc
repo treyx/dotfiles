@@ -49,3 +49,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 eval "$(hub alias -s)"
 
+
+# ------ #
+# heroku #
+# ------ #
+
+export PATH="/usr/local/heroku/bin:$PATH"
