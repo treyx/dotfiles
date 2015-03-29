@@ -4,11 +4,6 @@ source $HOME/.antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # oh-my-zsh plugins
-antigen bundle git
-antigen bundle bundler
-antigen bundle command-not-found
-
-
 
 antigen bundles <<EOBUNDLES
 
