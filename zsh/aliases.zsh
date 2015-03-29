@@ -2,7 +2,7 @@
 # shell #
 # ----- #
 
-alias path="echo '$PATH' | tr : '\n'"                             # display path for troubleshooting
+alias path="echo '$PATH' | tr : '\n'" # display path for troubleshooting
 
 # --- #
 # git #
@@ -32,9 +32,9 @@ alias gls='git log --topo-order --all --graph \
 # navigation #
 # ---------- #
 
-alias ..="cd .."                                                  # go up one directory
-alias todo="subl ~/Documents/todo.txt"                            # to do list
-alias dotf="subl ~/.dotfiles"                                     # manage my dotfiles
+alias ..="cd .."                       # go up one directory
+alias todo="subl ~/Documents/todo.txt" # to do list
+alias dotf="subl ~/.dotfiles"          # manage my dotfiles
 
 alias s="subl"
 alias ss="subl ."
@@ -47,9 +47,9 @@ alias tu3="cd ~/turing/module3"
 # directory contents #
 # ------------------ #
 
-alias l="ls -lah"                                                 # lists all with hidden files in readable sizes
-alias ll="ls -lh"                                                 # lists human readable sizes
-alias lt="ls -lahctr"                                             # lists sorted by date /most recent last / shows change time
+alias l="ls -lah"      # lists all with hidden files in readable sizes
+alias ll="ls -lh"      # lists human readable sizes
+alias lt="ls -lahctr"  # lists sorted by date /most recent last / shows change time
 
 # Resource Usage
 # alias df='df -kh'
@@ -58,4 +58,4 @@ alias lt="ls -lahctr"                                             # lists sorted
 # miscellaneous #
 # ------------- #
 
-alias week="date +%V"                                             # get week number
+alias week="date +%V" # get week number
