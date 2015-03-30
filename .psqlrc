@@ -1,23 +1,16 @@
 -- Prompt --
-
 \set PROMPT1 '%[%033[1m%]%M %n@%/%R%[%033[0m%]%# '
 
-
 -- Second Prompt --
-
 \set PROMPT2 '[more] %R > '
 
-
 -- don't store successive, duplicate commands --
-
 \set HISTCONTROL ignoredups
 
-
 -- expanded tabel format --
-
 \x auto
 
---
+-- welcome message --
 \echo 'Welcome to PostgreSQL! \n'
 \echo 'Type :version to see the PostgreSQL version. \n'
 \echo 'Type :extensions to see the available extensions. \n'
