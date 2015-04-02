@@ -3,6 +3,11 @@
 # ----- #
 
 alias path="echo '$PATH' | tr : '\n'" # display path for troubleshooting
+alias disk="df -h ~"
+
+
+alias bxe='bundle exec rake'
+alias be='bundle exec
 
 # --- #
 # git #
