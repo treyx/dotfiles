@@ -2,7 +2,6 @@
 # shell #
 # ----- #
 
-
 # Create a new directory and enter it
 function md() {
   mkdir -p "$@" && cd "$@"
@@ -12,13 +11,11 @@ function md() {
 # git #
 # --- #
 
-
 # git commit / twitter
 # function gcmt {
 #   git commit -m "$1"
 #   ruby -e 'require %(jumpstart_auth);ARGV.join(" ").scan(/.{1,140}/).each { |tweet| JumpstartAuth.twitter.update(tweet)}' $1
 # }
-
 
 # ----- #
 # rails #
