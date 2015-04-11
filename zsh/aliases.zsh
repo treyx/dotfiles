@@ -3,11 +3,15 @@
 # ----- #
 
 alias path="echo '$PATH' | tr : '\n'" # display path for troubleshooting
-alias disk="df -h ~"
+alias disk="df -h ~"                  # show disk space
 
 
-alias bxe='bundle exec rake'
-alias be='bundle exec
+# ----- #
+# rails #
+# ----- #
+
+alias bxe="bundle exec rake"
+alias be="bundle exec"
 
 # --- #
 # git #
@@ -21,9 +25,10 @@ alias gpu="git push --set-upstream origin HEAD"                   # pushes and s
 alias gcb="git checkout -b"                                       # create and checkout to new branch
 alias gclean="git branch --merged master | ag -v '\* master' \
               | xargs -n 1 git branch -d"                         # removes local branches that have been merged into master
-alias gcm='git commit -m "'                                       # commit with message
+alias gcm='git commit -m'                                       # commit with message
 alias grl="git remote --verbose"                                  # show remotes
 alias gra="git remote add"                                        # add remote
+alias grx="git remote rm"                                        # remove remote
 alias glc="git shortlog --summary --numbered"                     # print contributors by # of commits
 alias gl="git log --all --graph --decorate"                       # detailed log
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset \
