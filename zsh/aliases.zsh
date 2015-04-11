@@ -31,11 +31,11 @@ alias gra="git remote add"                                        # add remote
 alias grx="git remote rm"                                         # remove remote
 alias glc="git shortlog --summary --numbered"                     # print contributors by # of commits
 alias gl="git log --all --graph --decorate"                       # detailed log
+alias gbr="git browse"                                            # open repo on github
+
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset \
             %an: %s - %Creset %C(yellow)%d%Creset \
             %Cgreen(%cr)%Creset' --abbrev-commit --date=relative" # pretty log
-
-alias gls='git log --topo-order --all --graph --pretty=format:"${_git_log_oneline_format}"'          # short log
 
 # ---------- #
 # navigation #
@@ -51,6 +51,7 @@ alias ss="subl ."
 alias tu1="cd ~/turing/module1"
 alias tu2="cd ~/turing/module2"
 alias tu3="cd ~/turing/module3"
+alias pivot="cd ~/turing/module3/the_pivot"
 
 # ------------------ #
 # directory contents #
@@ -61,7 +62,7 @@ alias ll="ls -lh"      # lists human readable sizes
 alias lt="ls -lahctr"  # lists sorted by date /most recent last / shows change time
 
 # Resource Usage
-# alias df='df -kh'
+# alias df="df -kh"
 
 # ------------- #
 # miscellaneous #
