@@ -25,18 +25,17 @@ alias gpu="git push --set-upstream origin HEAD"                   # pushes and s
 alias gcb="git checkout -b"                                       # create and checkout to new branch
 alias gclean="git branch --merged master | ag -v '\* master' \
               | xargs -n 1 git branch -d"                         # removes local branches that have been merged into master
-alias gcm='git commit -m'                                       # commit with message
-alias grl="git remote --verbose"                                  # show remotes
+alias gcm='git commit -m'                                         # commit with message
+alias grv="git remote -v"                                         # show remotes
 alias gra="git remote add"                                        # add remote
-alias grx="git remote rm"                                        # remove remote
+alias grx="git remote rm"                                         # remove remote
 alias glc="git shortlog --summary --numbered"                     # print contributors by # of commits
 alias gl="git log --all --graph --decorate"                       # detailed log
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset \
             %an: %s - %Creset %C(yellow)%d%Creset \
             %Cgreen(%cr)%Creset' --abbrev-commit --date=relative" # pretty log
 
-alias gls='git log --topo-order --all --graph \
-           --pretty=format:"${_git_log_oneline_format}"'          # short log
+alias gls='git log --topo-order --all --graph --pretty=format:"${_git_log_oneline_format}"'          # short log
 
 # ---------- #
 # navigation #
