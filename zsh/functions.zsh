@@ -11,6 +11,15 @@ function md() {
 # git #
 # --- #
 
+function gcm() {
+  args=$@
+  git commit -m "$args"
+}
+function gca() {
+  args=$@
+  git commit --amend -m "$args"
+}
+
 # git commit / twitter
 # function gcmt {
 #   git commit -m "$1"
