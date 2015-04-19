@@ -29,7 +29,6 @@ alias gpu="git push --set-upstream origin HEAD"                   # pushes and s
 alias gcb="git checkout -b"                                       # create and checkout to new branch
 alias gclean="git branch --merged master | ag -v '\* master' \
               | xargs -n 1 git branch -d"                         # removes local branches that have been merged into master
-alias gcm="git commit -m"                                         # commit with message
 alias grv="git remote -v"                                         # show remotes
 alias gra="git remote add"                                        # add remote
 alias grx="git remote rm"                                         # remove remote
