@@ -2,9 +2,22 @@
 # shell #
 # ----- #
 
-# Create a new directory and enter it
-function md() {
+# create a new directory and enter it
+function mkd() {
   mkdir -p "$@" && cd "$@"
+}
+
+# touch a file and create path
+function supertouch() {
+  if [ $# -lt 1 ]; then
+      echo "Missing argument";
+      return 1;
+  fi
+
+  for f in "$@"; do
+      mkdir -p -- "$(dirname -- "$f")"
+      touch -- "$f"
+  done
 }
 
 # --- #
