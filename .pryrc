@@ -10,3 +10,9 @@ Pry.config.editor = 'vim'
 
 Pry.commands.alias_command '??', 'whereami'
 
+# awesome inspect the asset pipeline
+if defined? Rails
+  Pry.config.commands.command "pipeline", "Rails.application.config.assets.path" do
+    output.puts Rails.application.config.assets.paths.ai
+  end
+end
