@@ -1,12 +1,9 @@
 # === config ===
-
 Pry.config.color = true
 Pry.config.theme = "tomorrow"
 
-
 # === editor ===
 Pry.config.editor = "vim"
-
 
 # === plugins ===
 begin
@@ -19,7 +16,7 @@ end
 # === prompt ===
 
 # wrap ANSI codes so Readline knows where the prompt ends
-def color(name, text)
+def colour(name, text)
   if Pry.color
     "\001#{Pry::Helpers::Text.send name, '{text}'}\002".sub '{text}', "\002#{text}\001"
   else
@@ -29,7 +26,7 @@ end
 
 Pry.config.prompt = [
   proc do |object, nest_level, pry|
-    prompt  = color :bright_black, Pry.view_clip(object)
+    prompt  = colour :bright_black, Pry.view_clip(object)
     prompt += ":#{nest_level}" if nest_level > 0
     prompt += colour :cyan, ' » '
   end, proc { |object, nest_level, pry| colour :cyan, '» ' }
