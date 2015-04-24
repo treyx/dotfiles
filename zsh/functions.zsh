@@ -67,6 +67,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'pry-rails'
+  gem 'awesome_print'
 end
 
 " >> Gemfile;
