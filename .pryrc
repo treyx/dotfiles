@@ -1,14 +1,44 @@
+# === config ===
+
+# Pry.config.should_load_plugins = false
+
+Pry.config.color = true
+Pry.config.theme = "tomorrow"
+
+
+# === editor ===
+Pry.config.editor = "vim"
+
+
+# === plugins ===
 begin
-  require 'awesome_print'
+  require "awesome_print"
   Pry.config.print = proc { |output, value| output.puts value.ai }
 rescue LoadError => err
   puts "no awesome_print :("
 end
 
-Pry.config.theme = "tomorrow"
-Pry.config.editor = 'vim'
+# === prompt ===
 
-Pry.commands.alias_command '??', 'whereami'
+# wrap ANSI codes so Readline knows where the prompt ends
+def colour(name, text)
+  if Pry.color
+    "\001#{Pry::Helpers::Text.send name, '{text}'}\002".sub '{text}', "\002#{text}\001"
+  else
+    text
+  end
+end
+
+Pry.config.prompt = [
+  proc do |object, nest_level, pry|
+    prompt  = colour :bright_black, Pry.view_clip(object)
+    prompt += ":#{nest_level}" if nest_level > 0
+    prompt += colour :cyan, ' » '
+  end, proc { |object, nest_level, pry| colour :cyan, '» ' }
+]
+
+# === aliases ===
+Pry.commands.alias_command "??", "whereami"
 
 # awesome inspect the asset pipeline
 if defined? Rails
