@@ -2,11 +2,12 @@
 # shell #
 # ----- #
 
-alias path="echo '$PATH' | tr : '\n'" # display path for troubleshooting
-alias disk="df -h ~"                  # show disk space
-alias psr="ps aux | ag ruby"          # show ruby processes
-alias cl="clear"                      # simple clear
-alias sniff="ngrep -W byline port 80"
+alias path="echo '$PATH' | tr : '\n'"                         # display path for troubleshooting
+alias disk="df -h ~"                                          # show disk space
+alias psr="ps aux | ag ruby"                                  # show ruby processes
+alias cl="clear"                                              # simple clear
+alias sniff="sudo ngrep -W byline port 80"
+alias tre="tree -aC -I '.git' --dirsfirst "$@" | less -FRNX;" # better tree
 
 
 # ----- #
@@ -20,6 +21,7 @@ alias be="bundle exec"
 # git #
 # --- #
 
+alias gd="git diff"
 alias gs="git status"
 alias gpr="hub pull-request"                                      # create a pull request
 alias gds="git diff | subl"                                       # open git diff in st3
@@ -54,6 +56,7 @@ alias ss="subl ."
 alias tu1="cd ~/turing/module1"
 alias tu2="cd ~/turing/module2"
 alias tu3="cd ~/turing/module3"
+alias hh="cd ~/turing/module3/hyper_hub"
 
 # ------------------ #
 # directory contents #
