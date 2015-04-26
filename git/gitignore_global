@@ -111,3 +111,15 @@ bower.json
 
 #Ignore pow enironment settings
 .powenv
+
+# Nodejs #
+##########
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
