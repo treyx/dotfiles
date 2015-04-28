@@ -33,12 +33,6 @@ function gca() {
   git commit --amend -m "$args"
 }
 
-# git commit / twitter
-# function gcmt {
-#   git commit -m "$1"
-#   ruby -e 'require %(jumpstart_auth);ARGV.join(" ").scan(/.{1,140}/).each { |tweet| JumpstartAuth.twitter.update(tweet)}' $1
-# }
-
 # ----- #
 # rails #
 # ----- #
