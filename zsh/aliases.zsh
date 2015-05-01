@@ -16,6 +16,7 @@ alias tre="tree -aC -I '.git' --dirsfirst "$@" | less -FRNX;" # better tree
 
 alias bxe="bundle exec rake"
 alias be="bundle exec"
+alias rdm="bundle exec rake db:migrate"
 
 # --- #
 # git #
