@@ -9,7 +9,7 @@ Pry.config.editor = "vim"
 begin
   require "awesome_print"
   Pry.config.print = proc { |output, value| output.puts value.ai }
-rescue LoadError => err
+rescue LoadError
   puts "no awesome_print :("
 end
 
@@ -31,9 +31,6 @@ Pry.config.prompt = [
     prompt += colour :cyan, ' » '
   end, proc { |object, nest_level, pry| colour :cyan, '» ' }
 ]
-
-# === aliases ===
-Pry.commands.alias_command "??", "whereami"
 
 # awesome inspect the asset pipeline
 if defined? Rails
