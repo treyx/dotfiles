@@ -51,7 +51,7 @@ alias gl="git log --all --graph --decorate"      # detailed log
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
 # removes local branches that have been merged into master
-alias gclean="git branch --merged master | ag -v '\* master' \ | xargs -n 1 git branch -d"
+alias gclean="git branch --merged master | ag -v '\* master' | xargs -n 1 git branch -d"
 
 # ---------- #
 # navigation #
