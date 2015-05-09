@@ -7,6 +7,11 @@ function mkd() {
   mkdir -p "$@" && cd "$@"
 }
 
+# cd to dotfile repo and open in editor
+function dotf() {
+  cd ~/.dotfiles && Subl .
+}
+
 # touch a file and create path
 function supertouch() {
   if [ $# -lt 1 ]; then
@@ -57,7 +62,7 @@ function add_rails_gems() {
 
 echo "
 
-group :test, :development do
+group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'pry-rails'

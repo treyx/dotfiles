@@ -59,7 +59,7 @@ alias gclean="git branch --merged master | ag -v '\* master' | xargs -n 1 git br
 
 alias ..="cd .."
 alias todo="subl ~/Documents/todo.txt"
-alias dotf="subl ~/.dotfiles"
+# alias dotf="subl ~/.dotfiles"
 alias tu1="cd ~/turing/module1"
 alias tu2="cd ~/turing/module2"
 alias tu3="cd ~/turing/module3"
