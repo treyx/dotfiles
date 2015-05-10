@@ -8,7 +8,6 @@ alias cl="clear"
 alias path="echo '$PATH' | tr : '\n'"   # display path for troubleshooting
 alias disk="df -h ~"                    # show disk space
 alias psr="ps aux | ag ruby"            # show ruby processes
-alias week="date +%V"                   # get week number
 
 alias sniff="sudo ngrep -W byline port 80"
 alias brewu="brew update && brew upgrade && brew cleanup && brew prune && brew doctor"
