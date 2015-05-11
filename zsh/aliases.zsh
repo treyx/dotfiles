@@ -26,6 +26,9 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias bxe="bundle exec rake"
 alias be="bundle exec"
 alias rdm="bundle exec rake db:migrate"
+alias hl='heroku logs --tail'
+alias rs='bundle exec rspec spec'
+alias rsf='bundle exec rspec spec/features'
 
 # --- #
 # git #
