@@ -7,10 +7,11 @@ alias ss="subl ."
 alias cl="clear"
 alias path="echo '$PATH' | tr : '\n'"   # display path for troubleshooting
 alias disk="df -h ~"                    # show disk space
-alias psr="ps aux | ag ruby"            # show ruby processes
+alias rserv="ruby -rwebrick -e'WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd).start'"
 
 alias sniff="sudo ngrep -W byline port 80"
 alias brewu="brew update && brew upgrade && brew cleanup && brew prune && brew doctor"
+alias psr="ps aux | ag ruby"            # show ruby processes
 
 # better tree
 alias tre="tree -aC -I '.git' --dirsfirst "$@" | less -FRNX;"
@@ -26,9 +27,9 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias bxe="bundle exec rake"
 alias be="bundle exec"
 alias rdm="bundle exec rake db:migrate"
-alias hl='heroku logs --tail'
-alias rs='bundle exec rspec spec'
-alias rsf='bundle exec rspec spec/features'
+alias hl="heroku logs --tail"
+alias rs="bundle exec rspec spec"
+alias rsf="bundle exec rspec spec/features"
 
 # --- #
 # git #
@@ -61,11 +62,12 @@ alias gclean="git branch --merged master | ag -v '\* master' | xargs -n 1 git br
 
 alias ..="cd .."
 alias todo="subl ~/Documents/todo.txt"
-# alias dotf="subl ~/.dotfiles"
 alias tu1="cd ~/turing/module1"
 alias tu2="cd ~/turing/module2"
 alias tu3="cd ~/turing/module3"
+alias tu4="cd ~/turing/module4"
 alias hh="cd ~/turing/module3/hyper_hub"
+alias cdp="cd ~/projects"
 
 # ------------------ #
 # directory contents #
