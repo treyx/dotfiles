@@ -28,6 +28,7 @@ alias bxe="bundle exec rake"
 alias be="bundle exec"
 alias rdm="bundle exec rake db:migrate"
 alias hl="heroku logs --tail"
+alias hrc="heroku run rails console"
 alias rs="bundle exec rspec spec"
 alias rsf="bundle exec rspec spec/features"
 
