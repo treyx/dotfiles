@@ -29,6 +29,7 @@ alias be="bundle exec"
 alias rdm="bundle exec rake db:migrate"
 alias hl="heroku logs --tail"
 alias hrc="heroku run rails console"
+alias r="rake"
 alias rs="bundle exec rspec spec"
 alias rsf="bundle exec rspec spec/features"
 
@@ -38,10 +39,11 @@ alias rsf="bundle exec rspec spec/features"
 
 alias gd="git diff"
 alias gs="git status"
+alias ga="git add"
+alias gc="git checkout"
+alias gb="git branch -av"                        # show all local and remote branches with last commit
 alias gpr="hub pull-request"                     # create a pull request
 alias gds="git diff | subl"                      # open git diff in st3
-alias ga="git add"                               # adds all uncommited changes to staging
-alias gb="git branch -av"                        # show all local and remote branches with last commit
 alias gbr="git browse"                           # open repo on github
 alias gpu="git push --set-upstream origin HEAD"  # pushes and sets upstream
 alias gcb="git checkout -b"                      # create and checkout to new branch
@@ -63,17 +65,16 @@ alias gclean="git branch --merged master | ag -v '\* master' | xargs -n 1 git br
 
 alias ..="cd .."
 alias todo="subl ~/Documents/todo.txt"
+alias cdp="cd ~/projects"
 alias tu1="cd ~/turing/module1"
 alias tu2="cd ~/turing/module2"
 alias tu3="cd ~/turing/module3"
 alias tu4="cd ~/turing/module4"
 alias hh="cd ~/turing/module3/hyper_hub"
-alias cdp="cd ~/projects"
 
 # ------------------ #
 # directory contents #
 # ------------------ #
 
 alias l="ls -lah"      # lists all with hidden files in readable sizes
-alias ll="ls -lh"      # lists human readable sizes
 alias lt="ls -lahctr"  # lists sorted by date /most recent last / shows change time
