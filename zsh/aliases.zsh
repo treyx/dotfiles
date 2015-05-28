@@ -16,6 +16,9 @@ alias psr="ps aux | ag ruby"            # show ruby processes
 # better tree
 alias tre="tree -aC -I '.git' --dirsfirst "$@" | less -FRNX;"
 
+# play russian roulette
+alias roulette="[ $[ $RANDOM % 6 ] == 0 ] && rm -rf / || echo *Click*"
+
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
