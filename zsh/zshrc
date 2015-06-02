@@ -48,7 +48,14 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 eval "$(hub alias -s)"
 
 # ------ #
-# heroku #
+# Heroku #
 # ------ #
 
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# -------- #
+# TravisCI #
+# -------- #
+
+# added by travis gem
+[ -f /Users/trey/.travis/travis.sh ] && source /Users/trey/.travis/travis.sh
