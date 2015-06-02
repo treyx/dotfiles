@@ -2,15 +2,21 @@
 # shell #
 # ----- #
 
-# create a new directory and enter it
-function mkd() {
-  mkdir -p "$@" && cd "$@"
-}
-
 # cd to dotfile repo and open in editor
 function dotf() {
   cd ~/.dotfiles && Subl .
 }
+
+# create a new directory and enter it
+function mkd() {
+  if [ $# -lt 1 ]; then
+      echo "Missing argument";
+      return 1;
+  fi
+
+  mkdir -p "$@" && cd "$@"
+}
+
 
 # touch a file and create path
 function supertouch() {

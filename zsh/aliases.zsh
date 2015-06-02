@@ -24,14 +24,19 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # rails #
 # ----- #
 
-alias bxe="bundle exec rake"
-alias be="bundle exec"
-alias rdm="bundle exec rake db:migrate"
-alias hl="heroku logs --tail"
-alias hrc="heroku run rails console"
 alias r="rake"
+alias be="bundle exec"
+alias bxe="bundle exec rake"
+alias rdm="bundle exec rake db:migrate"
 alias rs="bundle exec rspec spec"
 alias rsf="bundle exec rspec spec/features"
+
+# ------ #
+# heroku #
+# ------ #
+
+alias hl="heroku logs --tail"
+alias hrc="heroku run rails console"
 
 # --- #
 # git #
@@ -42,7 +47,6 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git checkout"
 alias gb="git branch -av"                        # show all local and remote branches with last commit
-alias gpr="hub pull-request"                     # create a pull request
 alias gds="git diff | subl"                      # open git diff in st3
 alias gbr="git browse"                           # open repo on github
 alias gpu="git push --set-upstream origin HEAD"  # pushes and sets upstream
