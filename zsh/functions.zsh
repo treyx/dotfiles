@@ -17,7 +17,6 @@ function mkd() {
   mkdir -p "$@" && cd "$@"
 }
 
-
 # touch a file and create path
 function supertouch() {
   if [ $# -lt 1 ]; then
@@ -29,6 +28,11 @@ function supertouch() {
       mkdir -p -- "$(dirname -- "$f")"
       touch -- "$f"
   done
+}
+
+# cd into a specifc gem's source code
+function 2gem() {
+  cd "$(dirname $(gem which $1))"
 }
 
 # --- #
@@ -48,6 +52,7 @@ function gca() {
 # rails #
 # ----- #
 
+# rails project generator
 function rails_pg() {
   rails new $1 -T -B --database=postgresql
 
