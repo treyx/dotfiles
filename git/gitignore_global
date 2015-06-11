@@ -118,6 +118,8 @@ bower.json
 # Logs
 logs
 *.log
+# Dependency directory
+node_modules
 
 # Runtime data
 pids
