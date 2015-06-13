@@ -10,8 +10,8 @@ function dotf() {
 # create a new directory and enter it
 function mkd() {
   if [ $# -lt 1 ]; then
-      echo "Missing argument";
-      return 1;
+    echo "Missing argument";
+    return 1;
   fi
 
   mkdir -p "$@" && cd "$@"
@@ -20,19 +20,28 @@ function mkd() {
 # touch a file and create path
 function supertouch() {
   if [ $# -lt 1 ]; then
-      echo "Missing argument";
-      return 1;
+    echo "Missing argument";
+    return 1;
   fi
 
   for f in "$@"; do
-      mkdir -p -- "$(dirname -- "$f")"
-      touch -- "$f"
+    mkdir -p -- "$(dirname -- "$f")"
+    touch -- "$f"
   done
 }
 
 # cd into a specifc gem's source code
 function 2gem() {
   cd "$(dirname $(gem which $1))"
+}
+
+# show directory history
+fucntion d() {
+  if [ $# -lt 1 ]; then
+    dirs -v | head -10
+  fi
+
+  cd -$@
 }
 
 # --- #

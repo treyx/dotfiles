@@ -1,6 +1,6 @@
-# ----- #
-# shell #
-# ----- #
+# --- #
+# zsh #
+# --- #
 
 alias s="subl"
 alias ss="subl ."
@@ -30,6 +30,7 @@ alias bxe="bundle exec rake"
 alias rdm="bundle exec rake db:migrate"
 alias rs="bundle exec rspec spec"
 alias rsf="bundle exec rspec spec/features"
+alias rsm="bundle exec rspec spec/models"
 
 # ------ #
 # heroku #
