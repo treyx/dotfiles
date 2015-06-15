@@ -7,7 +7,10 @@ alias ss="subl ."
 alias cl="clear"
 alias path="echo '$PATH' | tr : '\n'"   # display path for troubleshooting
 alias disk="df -h ~"                    # show disk space
-alias rserv="ruby -rwebrick -e'WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd).start'"
+
+alias rserv="ruby -run -ehttpd . -p 8000"
+alias pyserv="python -m SimpleHTTPServer 8000"
+alias serv="http-server -p 8000"
 
 alias sniff="sudo ngrep -W byline port 80"
 alias brewu="brew update && brew upgrade && brew cleanup && brew prune && brew doctor"
