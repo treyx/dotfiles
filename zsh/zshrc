@@ -57,5 +57,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # TravisCI #
 # -------- #
 
-# added by travis gem
 [ -f /Users/trey/.travis/travis.sh ] && source /Users/trey/.travis/travis.sh
