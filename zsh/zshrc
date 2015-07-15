@@ -18,10 +18,10 @@ compinit
 #
 
 typeset -ga sources
-sources+="$HOME/.dotfiles/zsh/antigenrc.zsh"
+# sources+="$HOME/.dotfiles/zsh/antigenrc.zsh"
 sources+="$HOME/.dotfiles/zsh/functions.zsh"
 sources+="$HOME/.dotfiles/zsh/aliases.zsh"
-sources+="$HOME/.dotfiles/zsh/prompt.zsh"
+# sources+="$HOME/.dotfiles/zsh/prompt.zsh"
 
 #
 # include sources
@@ -32,6 +32,12 @@ foreach file (`echo $sources`)
         source $file
     fi
 end
+
+#
+# custom bin directory for scripting
+#
+
+export PATH="$HOME/.dotfiles/bin:$PATH"
 
 # ----- #
 # rbenv #
@@ -57,4 +63,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # TravisCI #
 # -------- #
 
-[ -f /Users/trey/.travis/travis.sh ] && source /Users/trey/.travis/travis.sh
+# [ -f /Users/trey/.travis/travis.sh ] && source /Users/trey/.travis/travis.sh
