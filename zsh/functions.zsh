@@ -4,7 +4,7 @@
 
 # cd to dotfile repo and open in editor
 function dotf() {
-  cd ~/.dotfiles && Subl .
+  cd ~/projects/.dotfiles && Subl .
 }
 
 # create a new directory and enter it

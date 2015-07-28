@@ -74,7 +74,7 @@ alias gclean="git branch --merged master | ag -v '\* master' | xargs -n 1 git br
 alias ..="cd .."
 alias todo="subl ~/Documents/todo.txt"
 alias cdp="cd ~/projects"
-
+alias cdc="cd ~/projects/captainu"
 
 # ------------------ #
 # directory contents #
