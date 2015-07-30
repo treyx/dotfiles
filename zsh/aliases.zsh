@@ -35,13 +35,6 @@ alias rs="bundle exec rspec spec"
 alias rsf="bundle exec rspec spec/features"
 alias rsm="bundle exec rspec spec/models"
 
-# ------ #
-# heroku #
-# ------ #
-
-alias hl="heroku logs --tail"
-alias hrc="heroku run rails console"
-
 # --- #
 # git #
 # --- #
@@ -50,6 +43,7 @@ alias gd="git diff"
 alias gs="git status"
 alias ga="git add"
 alias gc="git checkout"
+
 alias gb="git branch -av"                        # show all local and remote branches with last commit
 alias gds="git diff | subl"                      # open git diff in st3
 alias gbr="git browse"                           # open repo on github
@@ -72,8 +66,10 @@ alias gclean="git branch --merged master | ag -v '\* master' | xargs -n 1 git br
 # ---------- #
 
 alias ..="cd .."
-alias todo="subl ~/Documents/todo.txt"
+alias todo="subl ~/projects/todo.txt"
 alias cdp="cd ~/projects"
+alias desk="cd ~/Desktop"
+alias down="cd ~/Downloads"
 alias cdc="cd ~/projects/captainu"
 
 # ------------------ #
@@ -82,3 +78,10 @@ alias cdc="cd ~/projects/captainu"
 
 alias l="ls -lah"      # lists all with hidden files in readable sizes
 alias lt="ls -lahctr"  # lists sorted by date /most recent last / shows change time
+
+# ------ #
+# heroku #
+# ------ #
+
+alias hl="heroku logs --tail"
+alias hrc="heroku run rails console"
