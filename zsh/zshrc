@@ -18,10 +18,10 @@ compinit
 #
 
 typeset -ga sources
-# sources+="$HOME/.dotfiles/zsh/antigenrc.zsh"
-sources+="$HOME/.dotfiles/zsh/functions.zsh"
-sources+="$HOME/.dotfiles/zsh/aliases.zsh"
-# sources+="$HOME/.dotfiles/zsh/prompt.zsh"
+sources+="$HOME/projects/dotfiles/zsh/antigenrc.zsh"
+sources+="$HOME/projects/dotfiles/zsh/functions.zsh"
+sources+="$HOME/projects/dotfiles/zsh/aliases.zsh"
+sources+="$HOME/projects/dotfiles/zsh/prompt.zsh"
 
 #
 # include sources
@@ -37,7 +37,7 @@ end
 # custom bin directory for scripting
 #
 
-export PATH="$HOME/.dotfiles/bin:$PATH"
+export PATH="$HOME/projects/dotfiles/bin:$PATH"
 
 # ----- #
 # rbenv #
@@ -57,10 +57,28 @@ eval "$(hub alias -s)"
 # Heroku #
 # ------ #
 
-export PATH="/usr/local/heroku/bin:$PATH"
+# export PATH="/usr/local/heroku/bin:$PATH"
 
 # -------- #
 # TravisCI #
 # -------- #
 
 # [ -f /Users/trey/.travis/travis.sh ] && source /Users/trey/.travis/travis.sh
+
+
+# ------------------ #
+# CaptainU shortcuts #
+# ------------------ #
+
+export PATH="$HOME/subs/bin:$PATH"
+
+eval "$($HOME/subs/bin/cu init -)"
+
+
+# ----- #
+# MYSQL #
+# ----- #
+
+export MYSQL=/usr/local/opt/mysql55
+
+export PATH=$PATH:$MYSQL/bin
