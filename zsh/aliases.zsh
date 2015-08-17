@@ -5,14 +5,12 @@
 alias s="subl"
 alias ss="subl ."
 alias cl="clear"
+
 alias path="echo '$PATH' | tr : '\n'"   # display path for troubleshooting
 alias disk="df -h ~"                    # show disk space
 
-alias rserv="ruby -run -ehttpd . -p 8000"
-alias pyserv="python -m SimpleHTTPServer 8000"
-alias serv="http-server -p 8000"
-
 alias sniff="sudo ngrep -W byline port 80"
+
 alias brewu="brew update && brew upgrade && brew cleanup && brew prune && brew doctor"
 alias psr="ps aux | ag ruby"            # show ruby processes
 
@@ -43,8 +41,9 @@ alias gd="git diff"
 alias gs="git status"
 alias ga="git add"
 alias gc="git checkout"
+alias gb="git branch"
 
-alias gb="git branch -av"                        # show all local and remote branches with last commit
+alias gba="git branch -av"                       # show all local and remote branches with last commit
 alias gds="git diff | subl"                      # open git diff in st3
 alias gbr="git browse"                           # open repo on github
 alias gpu="git push --set-upstream origin HEAD"  # pushes and sets upstream
@@ -66,11 +65,16 @@ alias gclean="git branch --merged master | ag -v '\* master' | xargs -n 1 git br
 # ---------- #
 
 alias ..="cd .."
+
 alias todo="subl ~/projects/todo.txt"
 alias cdp="cd ~/projects"
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
+
+
 alias cdc="cd ~/projects/captainu"
+alias cuc="cd ~/projects/captainu/teamlab"
+alias cua="cd ~/projects/captainu/launchpad"
 
 # ------------------ #
 # directory contents #
@@ -85,3 +89,9 @@ alias lt="ls -lahctr"  # lists sorted by date /most recent last / shows change t
 
 alias hl="heroku logs --tail"
 alias hrc="heroku run rails console"
+
+# ---------- #
+# Capistrano #
+# ---------- #
+
+alias capdep="bundle exec cap production deploy"

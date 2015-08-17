@@ -57,23 +57,7 @@ eval "$(hub alias -s)"
 # Heroku #
 # ------ #
 
-# export PATH="/usr/local/heroku/bin:$PATH"
-
-# -------- #
-# TravisCI #
-# -------- #
-
-# [ -f /Users/trey/.travis/travis.sh ] && source /Users/trey/.travis/travis.sh
-
-
-# ------------------ #
-# CaptainU shortcuts #
-# ------------------ #
-
-export PATH="$HOME/subs/bin:$PATH"
-
-eval "$($HOME/subs/bin/cu init -)"
-
+export PATH="/usr/local/heroku/bin:$PATH"
 
 # ----- #
 # MYSQL #
@@ -82,3 +66,11 @@ eval "$($HOME/subs/bin/cu init -)"
 export MYSQL=/usr/local/opt/mysql55
 
 export PATH=$PATH:$MYSQL/bin
+
+# ------------- #
+# CaptainU subs #
+# ------------- #
+
+export PATH="$HOME/subs/bin:$PATH"
+
+eval "$($HOME/subs/bin/cu init -)"
