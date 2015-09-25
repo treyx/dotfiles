@@ -6,7 +6,7 @@ alias s="subl"
 alias ss="subl ."
 alias cl="clear"
 
-alias path="echo '$PATH' | tr : '\n'"   # display path for troubleshooting
+alias path='echo $PATH | tr -s ":" "\n"'   # display path for troubleshooting
 alias disk="df -h ~"                    # show disk space
 
 alias sniff="sudo ngrep -W byline port 80"
