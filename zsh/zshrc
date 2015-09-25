@@ -44,7 +44,6 @@ export PATH="$HOME/projects/dotfiles/bin:$PATH"
 # ----- #
 
 export PATH="$HOME/.rbenv/bin:$PATH"
-
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # --- #
@@ -63,14 +62,12 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # MYSQL #
 # ----- #
 
-export MYSQL=/usr/local/opt/mysql55
-
+export MYSQL=/usr/local/opt/mysql
 export PATH=$PATH:$MYSQL/bin
 
 # ------------- #
 # CaptainU subs #
 # ------------- #
 
-export PATH="$HOME/subs/bin:$PATH"
-
-eval "$($HOME/subs/bin/cu init -)"
+export PATH="$HOME/.subs/bin:$PATH"
+eval "$($HOME/.subs/bin/cu init -)"

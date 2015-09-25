@@ -10,6 +10,7 @@ alias path="echo '$PATH' | tr : '\n'"   # display path for troubleshooting
 alias disk="df -h ~"                    # show disk space
 
 alias sniff="sudo ngrep -W byline port 80"
+alias netcheck="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 
 alias brewu="brew update && brew upgrade && brew cleanup && brew prune && brew doctor"
 alias psr="ps aux | ag ruby"            # show ruby processes
@@ -28,10 +29,8 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias r="rake"
 alias be="bundle exec"
 alias bxe="bundle exec rake"
-alias rdm="bundle exec rake db:migrate"
+alias rdbm="bundle exec rake db:migrate"
 alias rs="bundle exec rspec spec"
-alias rsf="bundle exec rspec spec/features"
-alias rsm="bundle exec rspec spec/models"
 
 # --- #
 # git #
@@ -42,6 +41,7 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git checkout"
 alias gb="git branch"
+alias whoops="git reset --hard"
 
 alias gba="git branch -av"                       # show all local and remote branches with last commit
 alias gds="git diff | subl"                      # open git diff in st3
@@ -70,6 +70,7 @@ alias todo="subl ~/projects/todo.txt"
 alias cdp="cd ~/projects"
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
+alias oss="cd ~/projects/oss"
 
 
 alias cdc="cd ~/projects/captainu"
