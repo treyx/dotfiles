@@ -46,13 +46,15 @@ alias whoops="git reset --hard"
 alias gba="git branch -av"                       # show all local and remote branches with last commit
 alias gds="git diff | subl"                      # open git diff in st3
 alias gbr="git browse"                           # open repo on github
-alias gpu="git push --set-upstream origin HEAD"  # pushes and sets upstream
 alias gcb="git checkout -b"                      # create and checkout to new branch
 alias grv="git remote -v"                        # show remotes
 alias gra="git remote add"                       # add remote
 alias grx="git remote rm"                        # remove remote
 alias glc="git shortlog --summary --numbered"    # print contributors by # of commits
 alias gl="git log --all --graph --decorate"      # detailed log
+
+# pushes upstream and opens branch in browser
+alias gpu="git push --set-upstream origin HEAD && git browse"
 
 # pretty log
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
@@ -71,6 +73,7 @@ alias cdp="cd ~/projects"
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
 alias oss="cd ~/projects/oss"
+alias temp="cd ~/projects/temp"
 
 
 alias cdc="cd ~/projects/captainu"
@@ -81,8 +84,8 @@ alias cua="cd ~/projects/captainu/launchpad"
 # directory contents #
 # ------------------ #
 
-alias l="ls -lah"      # lists all with hidden files in readable sizes
-alias lt="ls -lahctr"  # lists sorted by date /most recent last / shows change time
+alias l="ls -lahFG"      # lists all with hidden files in readable sizes
+alias lt="ls -lahctr"    # lists sorted by date /most recent last / shows change time
 
 # ------ #
 # heroku #
