@@ -4,7 +4,7 @@
 
 # cd to dotfile repo and open in editor
 function dotf() {
-  cd ~/projects/dotfiles && Subl .
+  cd ~/projects/dotfiles && code .
 }
 
 # create a new directory and enter it
@@ -45,4 +45,11 @@ function gca() {
 function gcp() {
   args=$@
   git cherry-pick "$args"
+}
+
+function yts() {
+  args=$@
+  while read p; do
+    youtube-dl $p
+  done <"$args"
 }

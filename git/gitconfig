@@ -1,10 +1,10 @@
 [user]
-  email = trey.tomlinson@bluestarsports.com
+  email = trey@ideasbynature.com
   name = Trey Tomlinson
   initials = TT
 [core]
   excludesfile = /Users/trey/.gitignore_global
-  editor = subl -w
+  editor = code --wait
 [github]
   user = treyx
 [diff]

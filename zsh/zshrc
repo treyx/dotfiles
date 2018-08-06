@@ -43,21 +43,23 @@ export PATH="$HOME/projects/dotfiles/bin:$PATH"
 # rbenv #
 # ----- #
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# --- #
-# hub #
-# --- #
 
-eval "$(hub alias -s)"
-
-#########
-
-export VISUAL='/Users/trey/projects/dotfiles/bin/subl'
-export EDITOR="$VISUAL --wait"
+# ------ #
+# golang #
+# ------ #
 
 export GOPATH=$HOME/projects/go-workspace
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+
+# ---- #
+# node #
+# ---- #
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

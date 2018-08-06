@@ -1,12 +1,3 @@
-# ---- #
-# ruby #
-# ---- #
-
-alias be="bundle exec"
-alias bxe="bundle exec rake"
-alias ce="chef exec"
-alias kb="kubectl"
-
 # --- #
 # git #
 # --- #
@@ -17,15 +8,15 @@ alias ga="git add"
 alias gc="git checkout"
 alias gcom="git checkout master"
 alias whoops="git reset --hard"
-
-alias gl="git log --all --graph --decorate"      # detailed log
 alias grv="git remote -v"                        # show remotes
 alias gbr="git browse"                           # open repo on github
 alias gcb="git checkout -b"                      # create and checkout to new branch
-alias glc="git shortlog --summary --numbered"    # print contributors by # of commits
 
-# pushes upstream and opens branch in browser
-alias gpu="git push --set-upstream origin HEAD && git browse"
+alias glc="git shortlog --summary --numbered"    # print contributors by # of commits
+alias gl="git log --all --graph --decorate"      # detailed log
+
+# pushes branch and sets upstream on remote
+alias gpu="git push --set-upstream origin HEAD"
 
 # better git log
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
@@ -56,6 +47,15 @@ alias cdp="cd ~/projects"
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
 alias temp="cd ~/projects/temp"
+alias cdi="cd ~/projects/ibn"
+
+alias vsc="code"
+
+alias kb="kubectl"
+
+alias yt="youtube-dl"
 
 # better tree
 alias tre="tree -aC -I '.git' --dirsfirst "$@" | less -FRNX;"
+
+
