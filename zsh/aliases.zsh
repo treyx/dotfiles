@@ -16,7 +16,7 @@ alias glc="git shortlog --summary --numbered"    # print contributors by # of co
 alias gl="git log --all --graph --decorate"      # detailed log
 
 # pushes branch and sets upstream on remote
-alias gpu="git push --set-upstream origin HEAD"
+alias gpu="git push --set-upstream origin HEAD && git browse"
 
 # better git log
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
@@ -47,7 +47,8 @@ alias cdp="cd ~/projects"
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
 alias temp="cd ~/projects/temp"
-alias cdi="cd ~/projects/ibn"
+alias cdg="cd ~/projects/guild"
+alias gtf="cd ~/projects/guild/terraform-guild"
 
 alias vsc="code"
 

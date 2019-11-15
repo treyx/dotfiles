@@ -1,9 +1,9 @@
 [user]
-  email = trey@ideasbynature.com
+  email = trey.tomlinson@guildeducation.com
   name = Trey Tomlinson
   initials = TT
 [core]
-  excludesfile = /Users/trey/.gitignore_global
+  excludesfile = /Users/treytomlinson/.gitignore_global
   editor = code --wait
 [github]
   user = treyx
