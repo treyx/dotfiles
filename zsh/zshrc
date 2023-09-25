@@ -1,13 +1,8 @@
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/treytomlinson/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
-
-#
-# the main RC file (will be linked to ~/.zshrc)
-#
 
 # ---------- #
 # zsh config #
@@ -34,18 +29,10 @@ foreach file (`echo $sources`)
 end
 
 #
-# custom bin directory for scripting
+# custom dir for scripting
 #
 
 # export PATH="$HOME/projects/dotfiles/bin:$PATH"
-
-# ----- #
-# rbenv #
-# ----- #
-
-# export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 
 # ------- #
 # python3 #
@@ -53,42 +40,3 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
-
-# ------ #
-# golang #
-# ------ #
-
-# export GOPATH=$HOME/projects/go-workspace
-# export GOROOT=/usr/local/opt/go/libexec
-# export PATH=$PATH:$GOPATH/bin
-# export PATH=$PATH:$GOROOT/bin
-
-# ---- #
-# node #
-# ---- #
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-# ------- #
-# ansible #
-# ------- #
-
-# workaround for Ansible fork() issue on macOS Mojave
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
-
-# ------ #
-# direnv #
-# ------ #
-
-eval "$(direnv hook zsh)"
-
-
-# --- #
-# hub #
-# --- #
-
-eval "$(hub alias -s)"
