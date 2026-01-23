@@ -1,30 +1,64 @@
 [user]
-  email = trey.tomlinson@guildeducation.com
   name = Trey Tomlinson
+  email = trtomlin@cisco.com
   initials = TT
-[core]
-  excludesfile = /Users/treytomlinson/.gitignore_global
-  editor = code --wait
+
 [github]
   user = treyx
-[diff]
-  tool = vimdiff
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = cursor --wait
+
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = true
+
 [push]
   default = upstream
+  autoSetupRemote = true
+
+[fetch]
+  prune = true
+
+[rebase]
+  autoStash = true
+
+[merge]
+  conflictStyle = diff3
+
+[diff]
+  tool = vimdiff
+  colorMoved = default
+
 [web]
   browser = google-chrome
+
 [color]
   ui = auto
+
 [color "branch"]
   current = yellow reverse
   local = yellow
   remote = green
+
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
   old = red bold
   new = green bold
+
 [color "status"]
   added = green
   changed = red
   untracked = cyan
+
+# Work-specific URL rewrites
+[url "ssh://git@cd.splunkdev.com"]
+  insteadOf = https://cd.splunkdev.com
+
+# Machine-specific overrides
+[include]
+  path = ~/.gitconfig.local

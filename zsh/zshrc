@@ -1,42 +1,31 @@
-# The following lines were added by compinstall
-zstyle :compinstall filename '$HOME/.zshrc'
+# =========== #
+# Completions #
+# =========== #
 
 autoload -Uz compinit
-compinit
+# Only regenerate compinit cache once per day
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C  # skip security check, use cache
+fi
 
-# ---------- #
-# zsh config #
-# ---------- #
+# ====== #
+# Prompt #
+# ====== #
 
-#
-# build array of environment config files for sourcing
-#
+autoload -U promptinit; promptinit
+prompt pure
 
-typeset -ga sources
-sources+="$HOME/projects/dotfiles/zsh/antigenrc.zsh"
-sources+="$HOME/projects/dotfiles/zsh/functions.zsh"
-sources+="$HOME/projects/dotfiles/zsh/aliases.zsh"
-sources+="$HOME/projects/dotfiles/zsh/prompt.zsh"
+# ====== #
+# Config #
+# ====== #
 
-#
-# include sources
-#
+ZDOTDIR="${DOTFILES:-$HOME/projects/dotfiles}/zsh"
 
-foreach file (`echo $sources`)
-    if [[ -a $file ]]; then
-        source $file
-    fi
-end
+for file in "$ZDOTDIR"/{antigenrc,functions,aliases}.zsh; do
+  [[ -f "$file" ]] && source "$file"
+done
 
-#
-# custom dir for scripting
-#
-
-# export PATH="$HOME/projects/dotfiles/bin:$PATH"
-
-# ------- #
-# python3 #
-# ------- #
-
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+# Machine-specific overrides (gitignored)
+[[ -f "$ZDOTDIR/local.zsh" ]] && source "$ZDOTDIR/local.zsh"

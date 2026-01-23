@@ -1,0 +1,5 @@
+# Minimal environment for all zsh invocations.
+export DOTFILES="${DOTFILES:-$HOME/projects/dotfiles}"
+
+# Default editor
+export EDITOR="cursor --wait"

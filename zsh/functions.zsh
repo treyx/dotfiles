@@ -1,10 +1,26 @@
+# --- #
+# git #
+# --- #
+
+# Returns the default branch (main or master) for the current repo
+function git_main_branch() {
+  local branch
+  for branch in main master; do
+    if git show-ref -q --verify "refs/heads/$branch" 2>/dev/null; then
+      echo "$branch"
+      return
+    fi
+  done
+  echo "master"  # fallback
+}
+
 # ----- #
 # shell #
 # ----- #
 
 # cd to dotfile repo and open in editor
 function dotf() {
-  cd ~/projects/dotfiles && code .
+  cd "${DOTFILES:-$HOME/projects/dotfiles}" && ${EDITOR:-cursor} .
 }
 
 # create a new directory and enter it
@@ -45,11 +61,4 @@ function gca() {
 function gcp() {
   args=$@
   git cherry-pick "$args"
-}
-
-function yts() {
-  args=$@
-  while read p; do
-    youtube-dl $p
-  done <"$args"
 }

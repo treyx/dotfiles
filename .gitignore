@@ -2,3 +2,9 @@
 !.rspec
 
 bin/*
+
+# Machine-specific local config
+zsh/local.zsh
+
+# Compiled zsh files
+*.zwc

@@ -6,7 +6,7 @@ alias gd="git diff"
 alias gs="git status"
 alias ga="git add"
 alias gc="git checkout"
-alias gcom="git checkout master"
+alias gcom='git checkout $(git_main_branch)'
 alias whoops="git reset --hard"
 alias grv="git remote -v"                        # show remotes
 alias gbr="git browse"                           # open repo on github
@@ -24,8 +24,8 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C
 # better git branch
 alias gb='for c in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $c|head -n 1`\\t$c;done|sort -r'
 
-# removes local branches that have been merged into master
-alias gclean="git branch --merged master | ag -v '\* master' | xargs -n 1 git branch -d"
+# removes local branches that have been merged into main/master
+alias gclean='git branch --merged $(git_main_branch) | grep -v "^\*" | grep -v "$(git_main_branch)" | xargs -n 1 git branch -d'
 
 #grab full sha of last commit
 alias glast="git log -1 --pretty=format:%H | pbcopy"
@@ -39,24 +39,15 @@ alias lt="ls -lahctr"                      # lists sorted by date /most recent l
 alias path='echo $PATH | tr -s ":" "\n"'   # display path for troubleshooting
 
 alias ..="cd .."
-alias s="subl"
-alias ss="subl ."
-alias cl="clear"
 
 alias cdp="cd ~/projects"
-alias desk="cd ~/Desktop"
-alias down="cd ~/Downloads"
-alias temp="cd ~/projects/temp"
-alias cdg="cd ~/projects/guild"
-alias gtf="cd ~/projects/guild/terraform-guild"
 
 alias vsc="code"
 
 alias kb="kubectl"
 
-alias yt="youtube-dl"
-
 # better tree
-alias tre="tree -aC -I '.git' --dirsfirst "$@" | less -FRNX;"
+alias tre='tree -aC --dirsfirst -I ".git" "$@" | less -FRNX'
 
 
+alias c='cursor .'
